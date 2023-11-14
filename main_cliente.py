@@ -11,11 +11,11 @@ def coletar_informacoes():
     mem = psutil.virtual_memory().percent
     cpu = psutil.cpu_percent()
     disco = psutil.disk_usage('/').percent
-    ip = '192.168.1.103'
+    ip = '192.168.1.103' #ip maquina cliente
 
-    return (ip, mem, cpu, disco)  # Removendo a coleta de processos
+    return (ip, mem, cpu, disco)
 
-conexao = pyodbc.connect('DRIVER={SQL Server};SERVER=192.168.1.112;DATABASE=MONITORAMENTO;UID=DBA2;PWD=123')
+conexao = pyodbc.connect('DRIVER={SQL Server};SERVER=192.168.1.112;DATABASE=MONITORAMENTO;UID=DBA2;PWD=123') # Conexao do banco
 cursor = conexao.cursor()
 
 ip_servidor = '192.168.1.112'
