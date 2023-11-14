@@ -5,7 +5,7 @@ import logging
 
 logging.basicConfig(filename='server.log', level=logging.INFO)
 
-conexao = pyodbc.connect('DRIVER={SQL Server};SERVER=192.168.1.112;DATABASE=MONITORAMENTO;UID=DBA2;PWD=123')
+conexao = pyodbc.connect('DRIVER={SQL Server};SERVER=192.168.1.112;DATABASE=MONITORAMENTO;UID=DBA2;PWD=123') #conexao banco
 cursor = conexao.cursor()
 
 host = '192.168.1.112'
